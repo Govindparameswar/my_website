@@ -428,7 +428,7 @@ const App = () => {
                         <div className="relative aspect-[4/5] max-w-sm mx-auto lg:max-w-none rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white"><img src="/image_1.jpeg" alt="Dr.Hema Savithri" className="w-full h-full object-cover" /></div>
                     </div>
                     <div className="space-y-6 md:space-y-8 text-left order-1 lg:order-2">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-[#E8F3EE] text-[#2D4636] text-[10px] md:text-xs lg:text-sm font-sans font-medium tracking-tight">Meet Your Teacher</div>
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-[#E8F3EE] text-[#2D4636] text-[10px] md:text-xs lg:text-sm font-sans font-medium tracking-tight">Teacher</div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3C1A0F] serif leading-tight">Dr. Hema Savithri, BAMS, MD (Ayurveda)</h2>
                         <div className="space-y-4 md:space-y-6 text-[#1A231F] font-sans text-sm md:text-base lg:text-lg leading-relaxed"><p>With over three decades of experience in Ayurvedic practice, teaching and community education, Dr. Hema Savithri has dedicated her life to helping people understand Ayurveda in a simple, practical and ethical way.
 
