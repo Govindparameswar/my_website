@@ -290,23 +290,33 @@ const App = () => {
                 <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-[#E4EBE0] opacity-40 -skew-x-12 translate-x-1/4 pointer-events-none"></div>
                 <div className="absolute -bottom-24 -left-24 w-64 h-64 lg:w-96 lg:h-96 bg-[#8EAC50] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-16 lg:py-20">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                        <div className="space-y-6 md:space-y-8 lg:space-y-10 text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-[#8EAC50]/30 text-[#2D4636] px-4 md:px-5 py-2 rounded-full text-[9px] md:text-[10px] lg:text-xs font-sans font-bold uppercase tracking-[0.2em] shadow-sm uppercase">
-                                <Sparkles size={14} className="text-[#8EAC50]" /> ANCIENT WISDOM FOR A BALANCED MODERN LIFE
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center">
+                        <div className="flex flex-col text-center xl:text-left">
+                            {/* Badge - Order 1 */}
+                            <div className="order-1 mb-6 md:mb-8 lg:mb-10">
+                                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-[#8EAC50]/30 text-[#2D4636] px-4 md:px-5 py-2 rounded-full text-[9px] md:text-[10px] lg:text-xs font-sans font-bold uppercase tracking-[0.2em] shadow-sm uppercase">
+                                    <Sparkles size={14} className="text-[#8EAC50]" /> ANCIENT WISDOM FOR A BALANCED MODERN LIFE
+                                </div>
                             </div>
-                            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-[1.1] text-[#1A231F]">
+
+                            {/* Heading - Order 2 */}
+                            <h1 className="order-2 text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-[1.1] text-[#1A231F] mb-6 md:mb-8 lg:mb-10">
                                 Nature's <span className="text-[#2D4636] italic font-normal serif">Wisdom</span>,<br className="hidden sm:block" />
                                 Your <span className="text-[#8EAC50] serif font-light">Vitality.</span>
                             </h1>
-                            <p className="text-sm md:text-base lg:text-xl text-gray-600 max-w-lg mx-auto lg:mx-0 font-sans leading-relaxed">A gentle online learning space created by an experienced Ayurvedic doctor to help you understand Ayurveda and apply it safely in your daily life.</p>
-                            <div className="flex justify-center lg:justify-start">
+
+                            {/* Content - Order 3 */}
+                            <p className="order-3 text-sm md:text-base xl:text-xl text-gray-600 max-w-lg mx-auto xl:mx-0 font-sans leading-relaxed mb-6 md:mb-8 xl:mb-10">A gentle online learning space created by an experienced Ayurvedic doctor to help you understand Ayurveda and apply it safely in your daily life.</p>
+
+                            {/* Video Button - Order 5 on mobile, Order 4 on desktop */}
+                            <div className="order-5 xl:order-4 flex justify-center xl:justify-start mb-6 xl:mb-10">
                                 <button onClick={() => window.open('https://youtube.com/shorts/93u7sW5ynmw?si=YB5K4rdoyUJRxiqi', '_blank')} className="bg-gradient-to-r from-[#4466FF] to-[#A055FF] text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg lg:text-xl font-sans font-bold shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-4 group">
                                     <div className="bg-white/20 p-2 rounded-full"><Play size={18} fill="currentColor" className="ml-0.5 text-white" /></div> Watch Video
                                 </button>
                             </div>
-                            {/* Trustpilot Review Badge */}
-                            <div className="flex justify-center lg:justify-start mt-6">
+
+                            {/* Rating - Order 6 on mobile, Order 5 on desktop */}
+                            <div className="order-6 xl:order-5 flex justify-center xl:justify-start">
                                 <div className="inline-flex items-center gap-3 md:gap-4">
                                     <div className="flex items-center gap-2">
                                         <span className="text-xl md:text-2xl font-bold text-[#1A231F] font-sans" style={{ fontFamily: "'Outfit', sans-serif" }}>5.0</span>
@@ -328,8 +338,26 @@ const App = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Image - Order 4 on mobile (appears after content), hidden on desktop */}
+                            <div className="order-4 xl:hidden relative mt-8 px-4 sm:px-0 max-w-lg mx-auto mb-8">
+                                <div className="absolute -inset-2 md:-inset-4 border border-[#8EAC50]/40 rounded-[2rem] md:rounded-[3rem] -rotate-3 pointer-events-none"></div>
+                                <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-white group">
+                                    <img src="/image_2.jpg" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#2D4636] via-transparent to-transparent opacity-60"></div>
+                                    <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10 text-white text-center">
+                                        <div className="bg-white/20 backdrop-blur-md p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/30">
+                                            <p className="text-lg md:text-xl lg:text-2xl italic serif mb-2">"A person is truly healthy when
+                                                the body systems are in balance."</p>
+                                            <p className="text-[9px] md:text-[10px] lg:text-xs uppercase tracking-[0.3em] font-bold text-[#CEDEBD]">Ashtanga Hridayam</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="relative mt-8 lg:mt-0 px-4 sm:px-0 max-w-lg mx-auto lg:max-w-none">
+
+                        {/* Desktop Image - hidden on mobile */}
+                        <div className="hidden xl:block relative px-4 sm:px-0 max-w-lg mx-auto xl:max-w-none">
                             <div className="absolute -inset-2 md:-inset-4 border border-[#8EAC50]/40 rounded-[2rem] md:rounded-[3rem] -rotate-3 pointer-events-none"></div>
                             <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-white group">
                                 <img src="/image_2.jpg" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
@@ -408,7 +436,7 @@ const App = () => {
                                                 <h4 className="text-xl font-bold text-[#1A231F] mb-4 font-serif leading-tight">{tier.fullTitle}</h4>
                                                 <p className="text-sm text-gray-600 font-sans leading-relaxed mb-6 italic border-b border-gray-50 pb-4">{tier.description}</p>
                                                 <div className="space-y-5">
-                                                    {tier.curriculum.map((item, i) => (<div key={i} className="flex gap-4 items-start group"><div className={`mt-0.5 p-1 rounded-md ${tier.accentBg} ${tier.accentText}`}><item.IconComp size={14} /></div><span className="text-[12px] text-gray-700 font-sans leading-snug">{item.text}</span></div>))}
+                                                    {tier.curriculum.map((item, i) => (<div key={i} className="flex gap-4 items-start group"><div className={`mt-1.5 w-2 h-2 rounded-full flex-shrink-0 ${tier.accentColor}`}></div><span className="text-[12px] text-gray-700 font-sans leading-snug">{item.text}</span></div>))}
                                                 </div>
                                             </div>
                                         </div>
@@ -422,21 +450,36 @@ const App = () => {
 
             {/* SECTION 3: Responsive About */}
             <section id="about-section" className="py-16 md:py-20 lg:py-24 bg-[#F1F5ED] overflow-hidden px-4 md:px-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <div className="relative group order-2 lg:order-1 text-center">
-                        <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#8EAC50]/10 rounded-full blur-2xl"></div>
-                        <div className="relative aspect-[4/5] max-w-sm mx-auto lg:max-w-none rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white"><img src="/image_1.jpeg" alt="Dr.Hema Savithri" className="w-full h-full object-cover" /></div>
-                    </div>
-                    <div className="space-y-6 md:space-y-8 text-left order-1 lg:order-2">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-[#E8F3EE] text-[#2D4636] text-[10px] md:text-xs lg:text-sm font-sans font-medium tracking-tight">Meet the Teacher</div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3C1A0F] serif leading-tight">Dr. Hema Savithri, BAMS, MD (Ayurveda)</h2>
-                        <div className="space-y-4 md:space-y-6 text-[#1A231F] font-sans text-sm md:text-base lg:text-lg leading-relaxed"><p>With over three decades of experience in Ayurvedic practice, teaching and community education, Dr. Hema Savithri has dedicated her life to helping people understand Ayurveda in a simple, practical and ethical way.
+                <div className="max-w-4xl mx-auto text-center">
+                    {/* Section Title */}
+                    <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#8EAC50] font-sans font-semibold mb-8 md:mb-12">
+                        Meet Your Lead Educator
+                    </p>
 
-                            A graduate and post-graduate in Ayurveda (BAMS, MD), she has conducted and led numerous successful workshops, learning programmes and awareness sessions for students, families and wellness seekers across different platforms. Her strength lies in making classical Ayurvedic principles easy to understand and suitable for everyday life.
-
-                            Through Kshemyayur, Dr. Hema continues her mission of building a supportive community of Ayurveda-loving learners who wish to improve their health, routines and inner balance through authentic, time-tested knowledge..</p></div>
-                        <div className="bg-white/80 backdrop-blur-sm p-6 md:p-10 rounded-tr-[2rem] lg:rounded-tr-[3rem] rounded-br-[2rem] lg:rounded-br-[3rem] rounded-bl-[2rem] lg:rounded-bl-[3rem] border-l-4 border-[#436454] relative shadow-sm"><Quote className="absolute top-4 left-4 text-[#436454]/10" size={32} /><p className="italic font-serif text-lg md:text-xl lg:text-2xl text-[#2D4636] leading-snug relative z-10">"Ayurveda is about understanding yourself and living in harmony with nature."</p></div>
+                    {/* Circular Profile Photo with Border */}
+                    <div className="relative inline-block mb-6 md:mb-8">
+                        <div className="w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full p-1 bg-gradient-to-br from-[#2D4636] via-[#436454] to-[#D4A574]">
+                            <div className="w-full h-full rounded-full overflow-hidden bg-white p-1">
+                                <img
+                                    src="/image_1.jpeg"
+                                    alt="Dr. Hema Savithri"
+                                    className="w-full h-full rounded-full object-cover"
+                                />
+                            </div>
+                        </div>
+                        {/* Orange Dot */}
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-[#D4A574] rounded-full shadow-md"></div>
                     </div>
+
+                    {/* Name */}
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#3C1A0F] serif italic mb-4 md:mb-6 tracking-wide">
+                        Dr. Hema Savithri, BAMS, MD (Ayurveda)
+                    </h2>
+
+                    {/* Quote */}
+                    <p className="text-sm md:text-base lg:text-lg text-gray-600 font-sans italic max-w-2xl mx-auto leading-relaxed px-4">
+                        "Dr. Hema Savithri is a senior Ayurvedic physician and educator with over 30 years of experience, dedicated to simplifying classical Ayurveda for everyday life. Through Kshemyayur, she empowers a growing community to achieve better health and balance using authentic, time-tested wisdom."
+                    </p>
                 </div>
             </section>
 
@@ -444,14 +487,8 @@ const App = () => {
             <section id="contact-section" className="py-16 md:py-20 lg:py-24 bg-white px-4 md:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-10 md:mb-16 space-y-4"><h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A231F] serif tracking-tight">Get in Touch</h2><p className="text-sm md:text-lg text-gray-500 font-sans">Our guides are here to support your journey.</p></div>
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-                        <div className="lg:col-span-4 space-y-8 md:space-y-10 text-left">
-                            <div className="flex items-start gap-4 group"><div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-[#F1F5ED] flex items-center justify-center text-[#2D4636] group-hover:bg-[#2D4636] group-hover:text-white transition-all duration-300 shadow-sm shrink-0"><Phone size={20} /></div><div><p className="text-[9px] font-bold uppercase tracking-widest text-[#8EAC50] mb-1">Direct Call</p><p className="text-lg md:text-xl font-bold font-sans text-[#1A231F]">+91 98765 43210</p></div></div>
-                            <div className="flex items-start gap-4 group"><div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-[#F1F5ED] flex items-center justify-center text-[#2D4636] group-hover:bg-[#2D4636] group-hover:text-white transition-all duration-300 shadow-sm shrink-0"><Mail size={20} /></div><div><p className="text-[9px] font-bold uppercase tracking-widest text-[#8EAC50] mb-1">Send Email</p><p className="text-lg md:text-xl font-bold font-sans text-[#1A231F]">kshemyayur@gmail.com</p></div></div>
-                            <div className="flex items-start gap-4 group cursor-pointer"><div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-[#F1F5ED] flex items-center justify-center text-[#2D4636] group-hover:bg-[#2D4636] group-hover:text-white transition-all duration-300 shadow-sm shrink-0"><Instagram size={20} /></div><div><p className="text-[9px] font-bold uppercase tracking-widest text-[#8EAC50] mb-1">Instagram</p><p className="text-lg md:text-xl font-bold font-sans text-[#1A231F]">@kshemyayur</p></div></div>
-                            <div className="flex items-start gap-4 group cursor-pointer"><div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-[#F1F5ED] flex items-center justify-center text-[#2D4636] group-hover:bg-[#2D4636] group-hover:text-white transition-all duration-300 shadow-sm shrink-0"><Twitter size={20} /></div><div><p className="text-[9px] font-bold uppercase tracking-widest text-[#8EAC50] mb-1">Twitter</p><p className="text-lg md:text-xl font-bold font-sans text-[#1A231F]">@kshemyayur</p></div></div>
-                        </div>
-                        <div className="lg:col-span-8 bg-white border border-gray-50 p-6 md:p-10 rounded-[2.5rem] shadow-xl"><SharedInquiryForm buttonText="Submit" /></div>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="bg-white border border-gray-50 p-6 md:p-10 rounded-[2.5rem] shadow-xl"><SharedInquiryForm buttonText="Submit" /></div>
                     </div>
                 </div>
             </section>
@@ -472,9 +509,9 @@ const App = () => {
                         <p className="text-base md:text-xl text-gray-600 leading-relaxed italic">{program.description}</p>
                         <div className="pt-8 space-y-8">
                             <h3 className="text-lg font-bold uppercase tracking-[0.2em] text-[#1A231F] border-b border-gray-100 pb-4">Full Path Curriculum</h3>
-                            <div className="space-y-8">{program.curriculum.map((item, i) => (<div key={i} className="flex gap-5 items-start"><div className={`p-3 rounded-xl ${program.accentBg} ${program.accentText} shrink-0`}><item.IconComp size={22} /></div><p className="text-sm md:text-base text-gray-700 font-sans leading-relaxed pt-1">{item.text}</p></div>))}</div>
+                            <div className="space-y-8">{program.curriculum.map((item, i) => (<div key={i} className="flex gap-5 items-start"><div className={`xl:hidden mt-2 w-2 h-2 rounded-full flex-shrink-0 ${program.accentColor}`}></div><div className={`hidden xl:flex p-3 rounded-xl ${program.accentBg} ${program.accentText} shrink-0`}><item.IconComp size={22} /></div><p className="text-sm md:text-base text-gray-700 font-sans leading-relaxed pt-1">{item.text}</p></div>))}</div>
                         </div>
-                        <div className={`mt-12 p-8 rounded-[2.5rem] ${program.color} border ${program.borderColor} shadow-xl`}><h4 className="text-2xl font-bold serif mb-4">Begin Your Journey</h4><p className="text-sm text-gray-600 mb-8">Ready to step into the sacred path of Ayurveda? Our academic guides are waiting to assist your registration.</p><button onClick={() => handleNavClick('enquiry', program)} className={`w-full py-5 rounded-2xl text-white font-bold uppercase tracking-widest text-xs ${program.accentColor} shadow-lg`}>Enquire for {program.title}</button></div>
+                        <div className={`mt-12 p-8 rounded-[2.5rem] ${program.color} border ${program.borderColor} shadow-xl xl:block`}><h4 className="hidden xl:block text-2xl font-bold serif mb-4">Begin Your Journey</h4><p className="hidden xl:block text-sm text-gray-600 mb-8">Ready to step into the sacred path of Ayurveda? Our academic guides are waiting to assist your registration.</p><button onClick={() => handleNavClick('enquiry', program)} className={`w-full py-5 rounded-2xl text-white font-bold uppercase tracking-widest text-xs ${program.accentColor} shadow-lg`}>Enquire for {program.title}</button></div>
                     </div>
                 </div>
             </div>
