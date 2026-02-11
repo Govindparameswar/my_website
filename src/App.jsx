@@ -499,10 +499,10 @@ const App = () => {
         const program = membershipTiers.find(t => t.id === selectedProgramId);
         if (!program) return <HomePage />;
         return (
-            <div className={`min-h-screen pt-28 pb-20 relative overflow-hidden bg-white px-6 animate-fade-in`}>
+            <div className={`min-h-screen pt-28 pb-20 relative overflow-hidden bg-white px-6`}>
                 <div className={`absolute top-0 right-0 w-full lg:w-1/2 h-full ${program.accentBg} opacity-30 -skew-x-12 translate-x-1/4 pointer-events-none`}></div>
                 <div className="max-w-4xl mx-auto relative z-10 text-left">
-                    <button onClick={() => setCurrentPage('home')} className={`inline-flex items-center gap-2 ${program.accentText} font-sans font-bold uppercase tracking-widest text-[11px] mb-8`}><ArrowRight size={14} className="rotate-180" /> Back to Programs</button>
+                    <button onClick={() => handleNavClick('programs')} className={`inline-flex items-center gap-2 ${program.accentText} font-sans font-bold uppercase tracking-widest text-[11px] mb-8`}><ArrowRight size={14} className="rotate-180" /> Back to Programs</button>
                     <div className="space-y-6">
                         <span className={`px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-white ${program.accentColor}`}>{program.tag}</span>
                         <h1 className="text-3xl md:text-5xl font-bold text-[#1A231F] serif leading-tight">{program.fullTitle}</h1>
