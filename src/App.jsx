@@ -343,7 +343,7 @@ const App = () => {
                             <div className="order-4 xl:hidden relative mt-8 px-4 sm:px-0 max-w-lg mx-auto mb-8">
                                 <div className="absolute -inset-2 md:-inset-4 border border-[#8EAC50]/40 rounded-[2rem] md:rounded-[3rem] -rotate-3 pointer-events-none"></div>
                                 <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-white group">
-                                    <img src="/image_2.jpg" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
+                                    <img src="/image_2.webp" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#2D4636] via-transparent to-transparent opacity-60"></div>
                                     <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10 text-white text-center">
                                         <div className="bg-white/20 backdrop-blur-md p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/30">
@@ -360,7 +360,7 @@ const App = () => {
                         <div className="hidden xl:block relative px-4 sm:px-0 max-w-lg mx-auto xl:max-w-none">
                             <div className="absolute -inset-2 md:-inset-4 border border-[#8EAC50]/40 rounded-[2rem] md:rounded-[3rem] -rotate-3 pointer-events-none"></div>
                             <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-white group">
-                                <img src="/image_2.jpg" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
+                                <img src="/image_2.webp" alt="Ayurvedic Ritual" className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition-transform duration-1000" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#2D4636] via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10 text-white text-center">
                                     <div className="bg-white/20 backdrop-blur-md p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/30">
@@ -461,7 +461,7 @@ const App = () => {
                         <div className="w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full p-1 bg-gradient-to-br from-[#2D4636] via-[#436454] to-[#D4A574]">
                             <div className="w-full h-full rounded-full overflow-hidden bg-white p-1">
                                 <img
-                                    src="/image_1.jpeg"
+                                    src="/image_1.webp"
                                     alt="Dr. Hema Savithri"
                                     className="w-full h-full rounded-full object-cover"
                                 />
@@ -536,7 +536,7 @@ const App = () => {
         <div className="min-h-screen bg-[#FDFBF7] text-[#2D3436] font-serif selection:bg-[#8EAC50] selection:text-white overflow-x-hidden">
             <nav className={`fixed w-full z-[100] transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-2 md:py-3' : 'bg-transparent py-4 md:py-6'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-                    <div className="flex items-center gap-2 md:gap-3 cursor-pointer group" onClick={() => handleNavClick('home')}><img src="/icon.jpg" alt="Logo" className="h-8 md:h-10 rounded-lg md:rounded-xl shrink-0" /><span className="text-lg md:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A231F]">Kshemy<span className="text-[#8EAC50] serif font-light italic">ayur</span></span></div>
+                    <div className="flex items-center gap-2 md:gap-3 cursor-pointer group" onClick={() => handleNavClick('home')}><img src="/icon.svg" alt="Logo" className="h-8 md:h-10 rounded-lg md:rounded-xl shrink-0" /><span className="text-lg md:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A231F]">Kshemy<span className="text-[#8EAC50] serif font-light italic">ayur</span></span></div>
                     <div className="hidden md:flex items-center gap-6 lg:gap-10">
                         {navLinks.map((link) => (<button key={link.id} onClick={() => handleNavClick(link.id)} className={`text-[11px] lg:text-[13px] uppercase tracking-[0.3em] font-sans font-bold transition-all hover:text-[#8EAC50] ${currentPage === 'home' && link.id === 'home' ? 'text-[#8EAC50]' : (currentPage === 'home' && link.id === 'programs' && window.location.hash === '#membership-section') ? 'text-[#8EAC50]' : 'text-[#1A231F]/60'}`}>{link.name}</button>))}
                         <button onClick={() => handleNavClick('enquiry')} className="bg-[#1A231F] text-white px-6 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl text-[11px] lg:text-[13px] font-sans font-bold hover:bg-[#8EAC50] transition-all uppercase tracking-widest">ENQUIRY</button>
@@ -551,7 +551,7 @@ const App = () => {
                 )}
             </nav>
             <main className="animate-fade-in">{currentPage === 'home' && <HomePage />}{currentPage === 'enquiry' && <EnquiryPage />}{currentPage === 'details' && <ProgramDetailsPage />}</main>
-            <footer className="bg-[#1A231F] text-white py-12 md:py-16 relative border-t border-[#8EAC50]/20"><div className="max-w-7xl mx-auto px-4 lg:px-8 text-center md:text-left"><div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-12"><div className="flex items-center gap-2 cursor-pointer" onClick={() => handleNavClick('home')}><img src="/icon.jpg" alt="Logo" className="h-8 rounded-lg shrink-0" /><span className="text-2xl font-bold">Kshemy<span className="text-[#8EAC50] serif italic font-light">ayur</span></span></div><div className="flex gap-6 md:gap-8">{[Instagram, Facebook, Twitter, Mail].map((IconComp, i) => (<div key={i} className="bg-white/5 p-2 rounded-full cursor-pointer hover:bg-[#8EAC50] transition-all"><IconComp size={20} className="text-[#8EAC50] hover:text-white" /></div>))}</div></div></div></footer>
+            <footer className="bg-[#1A231F] text-white py-12 md:py-16 relative border-t border-[#8EAC50]/20"><div className="max-w-7xl mx-auto px-4 lg:px-8 text-center md:text-left"><div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-12"><div className="flex items-center gap-2 cursor-pointer" onClick={() => handleNavClick('home')}><img src="/icon.svg" alt="Logo" className="h-8 rounded-lg shrink-0" style={{ filter: 'brightness(0) invert(1)' }} /><span className="text-2xl font-bold">Kshemy<span className="text-[#8EAC50] serif italic font-light">ayur</span></span></div><div className="flex gap-6 md:gap-8">{[Instagram, Facebook, Twitter, Mail].map((IconComp, i) => (<div key={i} className="bg-white/5 p-2 rounded-full cursor-pointer hover:bg-[#8EAC50] transition-all"><IconComp size={20} className="text-[#8EAC50] hover:text-white" /></div>))}</div></div></div></footer>
             <style dangerouslySetInnerHTML={{ __html: `.animate-fade-in { animation: fade-in 0.8s ease-out forwards; } @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } .serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }` }} />
         </div>
     );
